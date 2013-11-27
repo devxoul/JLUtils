@@ -13,6 +13,7 @@
 #import "UILabel+JLUtils.h"
 #import "UIView+JLUtils.h"
 #import "NSDictionary+JLUtils.h"
+#import "NSDate+JLUtils.h"
 
 
 #define VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
