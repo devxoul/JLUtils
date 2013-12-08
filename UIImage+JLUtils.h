@@ -13,5 +13,6 @@
 @property (nonatomic, readonly) UIImage *grayScaleImage;
 
 + (UIImage *)imageWithColor:(UIColor *)color;
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 
 @end
