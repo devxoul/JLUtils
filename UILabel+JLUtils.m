@@ -18,13 +18,21 @@
 
 - (void)sizeToFit
 {
-	[super sizeToFit];
-	if( self.maxWidth > 0 && self.frame.size.width > self.maxWidth )
-	{
-		CGRect frame = self.frame;
-		frame.size.width = self.maxWidth;
-		self.frame = frame;
-	}
+    if( !self.maxWidth ) {
+        [super sizeToFit];
+    } else {
+        CGRect frame = self.frame;
+        frame.size = [self sizeThatFits:CGSizeMake(self.maxWidth, 0)];
+        self.frame = frame;
+    }
+    
+//	[super sizeToFit];
+//	if( self.maxWidth > 0 && self.frame.size.width > self.maxWidth )
+//	{
+//		CGRect frame = self.frame;
+//		frame.size.width = self.maxWidth;
+//		self.frame = frame;
+//	}
 }
 
 - (CGFloat)maxWidth
