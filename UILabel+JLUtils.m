@@ -21,8 +21,12 @@
     if( !self.maxWidth ) {
         [super sizeToFit];
     } else {
+        CGSize size = [self sizeThatFits:CGSizeMake(self.maxWidth, 0)];
+        if( size.width > self.maxWidth ) {
+            size.width = self.maxWidth;
+        }
         CGRect frame = self.frame;
-        frame.size = [self sizeThatFits:CGSizeMake(self.maxWidth, 0)];
+        frame.size = size;
         self.frame = frame;
     }
     
