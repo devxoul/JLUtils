@@ -21,6 +21,17 @@
 
 @implementation UIColor (JLUtils)
 
++ (UIColor *)colorWithHex:(NSInteger)color
+{
+    // has alpha
+    if( color >= 0x1000000 ) {
+        NSInteger alpha = ( color >> 24 ) & 0xFF;
+        NSInteger colorWithoutAlpha = color - (color >> 24 << 24);
+        return [self colorWithHex:colorWithoutAlpha alpha:alpha / 255.0];
+    }
+    return [self colorWithHex:color alpha:1];
+}
+
 + (UIColor *)colorWithHex:(NSInteger)color alpha:(CGFloat)alpha
 {
 	NSInteger red = ( color >> 16 ) & 0xFF;

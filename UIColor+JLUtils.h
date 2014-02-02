@@ -21,6 +21,7 @@
 
 @interface UIColor (JLUtils)
 
++ (UIColor *)colorWithHex:(NSInteger)color;
 + (UIColor *)colorWithHex:(NSInteger)color alpha:(CGFloat)alpha;
 
 @end
