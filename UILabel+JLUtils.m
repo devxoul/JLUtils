@@ -29,14 +29,6 @@
         frame.size = size;
         self.frame = frame;
     }
-    
-//	[super sizeToFit];
-//	if( self.maxWidth > 0 && self.frame.size.width > self.maxWidth )
-//	{
-//		CGRect frame = self.frame;
-//		frame.size.width = self.maxWidth;
-//		self.frame = frame;
-//	}
 }
 
 - (CGFloat)maxWidth
