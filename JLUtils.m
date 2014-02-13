@@ -33,4 +33,24 @@
 	traceSubviews( view, 0 );
 }
 
++ (UIViewController *)topViewController{
+    return [[self class] topViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
+}
+
++ (UIViewController *)topViewController:(UIViewController *)rootViewController
+{
+    if (!rootViewController.presentedViewController) {
+        return rootViewController;
+    }
+    
+    if ([rootViewController.presentedViewController isMemberOfClass:[UINavigationController class]]) {
+        UINavigationController *navController = (UINavigationController *)rootViewController.presentedViewController;
+        UIViewController *lastViewController = navController.viewControllers.lastObject;
+        return [self topViewController:lastViewController];
+    }
+    
+    UIViewController *presentedViewController = (UIViewController *)rootViewController.presentedViewController;
+    return [self topViewController:presentedViewController];
+}
+
 @end

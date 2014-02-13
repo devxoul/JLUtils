@@ -34,4 +34,9 @@
 
 + (void)traceSubviews:(UIView *)view;
 
+/**
+ * https://gist.github.com/snikch/3661188
+ */
++ (UIViewController *)topViewController;
+
 @end
