@@ -16,6 +16,7 @@
 #import "NSDate+JLUtils.h"
 #import "NSURLComponents+JLUtils.h"
 #import "UIFont+JLUtils.h"
+#import "NSString+JLUtils.h"
 
 
 #define VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
