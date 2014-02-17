@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "JLUtils"
   s.homepage     = "http://github.com/devxoul/JLUtils"
-  s.license      = 'BSD'
+  s.license      = { :type => 'BSD', :file => 'LICENSE' }
   s.author       = { "devxoul" => "devxoul@gmail.com" }
   s.source       = { :git => "https://github.com/devxoul/JLUtils.git", :tag => "#{s.version}" }
   s.platform     = :ios, '6.0'
