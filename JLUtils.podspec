@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "JLUtils"
   s.version      = "0.0.1"
-  s.summary      = ""
+  s.summary      = "JLUtils"
   s.homepage     = "http://github.com/devxoul/JLUtils"
   s.license      = 'BSD'
   s.author       = { "devxoul" => "devxoul@gmail.com" }

@@ -7,6 +7,7 @@
 //
 
 #import "UIButton+JLUtils.h"
+#import "UIImage+JLUtils.h"
 #import <objc/runtime.h>
 #import <QuartzCore/QuartzCore.h>
 
