@@ -18,13 +18,28 @@
 - (void)setRegionToVisibleAllAnnotationsWithScale:(CGFloat)scale
 {
     NSArray *annotations = self.annotations;
+    if (!annotations.count || (annotations.count == 1 && annotations[0] == self.userLocation)) {
+        return;
+    }
 
-    CLLocationDegrees minLatitude = [annotations[0] coordinate].latitude;
-    CLLocationDegrees minLongitude = [annotations[0] coordinate].longitude;
-    CLLocationDegrees maxLatitude = minLatitude;
-    CLLocationDegrees maxLongitude = minLongitude;
+    CLLocationDegrees minLatitude, minLongitude, maxLatitude, maxLongitude;
+
+    // set default value
+    for (id<MKAnnotation> annotation in annotations) {
+        if (annotation == self.userLocation) {
+            continue;
+        }
+        minLatitude = annotation.coordinate.latitude;
+        minLongitude = annotation.coordinate.longitude;
+        maxLatitude = minLatitude;
+        maxLongitude = minLongitude;
+        break;
+    }
 
     for (id<MKAnnotation> annotation in annotations) {
+        if (annotation == self.userLocation) {
+            continue;
+        }
         minLongitude = MIN(minLongitude, annotation.coordinate.longitude);
         minLatitude = MIN(minLatitude, annotation.coordinate.latitude);
         maxLongitude = MAX(maxLongitude, annotation.coordinate.longitude);
