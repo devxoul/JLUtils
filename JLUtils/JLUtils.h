@@ -17,7 +17,6 @@
 #import "NSURLComponents+JLUtils.h"
 #import "UIFont+JLUtils.h"
 #import "NSString+JLUtils.h"
-#import "MKMapView+JLUtils.h"
 
 #define VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 #define BUILD [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
