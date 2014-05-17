@@ -31,6 +31,13 @@
     return components.day;
 }
 
+- (NSInteger)weekday
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSCalendarUnitWeekday fromDate:self];
+    return components.weekday;
+}
+
 - (NSInteger)hour
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];

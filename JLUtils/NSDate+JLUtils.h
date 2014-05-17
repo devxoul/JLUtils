@@ -13,6 +13,7 @@
 @property (nonatomic, readonly) NSInteger year;
 @property (nonatomic, readonly) NSInteger month;
 @property (nonatomic, readonly) NSInteger day;
+@property (nonatomic, readonly) NSInteger weekday;
 @property (nonatomic, readonly) NSInteger hour;
 @property (nonatomic, readonly) NSInteger minute;
 @property (nonatomic, readonly) NSInteger second;
