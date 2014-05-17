@@ -15,4 +15,9 @@
 + (UIImage *)imageWithColor:(UIColor *)color;
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 
+- (UIImage *)cropToRect:(CGRect)rect;
+- (UIImage *)cropToSquare;
+
+- (UIImage *)scaleAndRotateToResolution:(NSInteger)resolution;
+
 @end
